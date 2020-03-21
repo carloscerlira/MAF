@@ -4,6 +4,15 @@
 \textwidth = 15cm
 \topmargin = -2.5cm 
 \oddsidemargin = 1.5cm
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    citecolor = black,      
+    urlcolor=cyan,
+    }
+
 \usepackage{float}
 \usepackage{graphicx}
 
@@ -19,7 +28,8 @@
 
 \begin{document}
 \maketitle
-
+Nota: código utilizado se encuentra en 
+\url{https://github.com/carloscerlira/MAF/blob/master/Tarea_2/code.ipynb}
 \section*{1.-}
 Usar la transformada de Laplace para resolver las siguientes ecuaciones diferenciales
 con condiciones iniciales y estudiar la gráfica de las soluciones.
@@ -32,7 +42,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         35e^{2t}, & si $0<t<2$ \\
         0,& caso contrario
     \end{cases*},\quad y_0=3, \quad y'_0=-8 $
-    
+
 \end{enumerate}
 \begin{tcolorbox}
     \subsubsection*{Caso General}
@@ -60,10 +70,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         g*h &=Ay_0 \delta'*h + (Ay_0' + By_0) \delta*h \\
         g*h &=Ay_0h' + (Ay_0' + By_0)h
     \end{align*}
-    entonces la solución viene dada por:
-    \begin{align*}
-        y = \frac{1}{A} (y_1 + y_2)
-    \end{align*}
+    entonces la solución es $y = \frac{1}{A} (y_1 + y_2)$
 \end{tcolorbox}
 \begin{tcolorbox}
     \subsubsection*{1)}
@@ -81,7 +88,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}
     entonces nuestra solución es:
     \[ y = f*h + g*h \]
-    resolviendo numericamente $f*h$ encontramos la gráfica de $y$:
+    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_1.png}
@@ -102,7 +109,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}
     entonces nuestra solución es:
     \[ y = f*h + g*h \]
-    resolviendo númericamente $f*h$ encontramos la gráfica de $y$:
+    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_2.png}
@@ -124,7 +131,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}    
     entonces nuestra solución es:
     \[ y = f*h + g*h \]
-    resolviendo númericamente $f*h$ encontramos la gráfica de $y$:
+    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_3.png}
@@ -145,7 +152,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}
     entonces nuestra solución es:
     \[ y = f*h + g*h \]
-    resolviendo númericamente $f*h$ encontramos la gráfica de $y$:
+    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_4.png}
@@ -226,7 +233,7 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &= sinh  &&y_2= cosh(x-b)-1 \\
         y_1' &= cosh &&y_2'=sinh 
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral númericamente:
+    de donde obtenemos $y$ resolviendo la integral numéricamente:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_1.png}
@@ -241,7 +248,7 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &= x^2  &&y_2= x^2-x \\
         y_1' &= 2x &&y_2'= 2x-1 
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral númericamente:
+    de donde obtenemos $y$ resolviendo la integral numéricamente:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_2.png}
@@ -257,7 +264,7 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &= 1-xcotx  &&y_2= cotx \\
         y_1' &= -cotx + xcsc^2x  &&y_2'= -csc^2x 
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral númericamente:
+    de donde obtenemos $y$ resolviendo la integral numéricamente:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_3.png}
@@ -272,7 +279,7 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &=x  &&y_2= 1-x^2 \\
         y_1' &=1 &&y_2'= -2x  
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral númericamente:
+    de donde obtenemos $y$ resolviendo la integral numéricamente:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_4.png}
