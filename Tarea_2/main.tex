@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \textheight = 25cm 
 \textwidth = 15cm
-\topmargin = -2.5cm 
+\topmargin = -3.0cm 
 \oddsidemargin = 1.5cm
 \usepackage{hyperref}
 \hypersetup{
@@ -17,10 +17,13 @@
 \usepackage{graphicx}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mathtools, xparse}
 \usepackage[shortlabels]{enumitem}
-\usepackage[most]{tcolorbox}
+
+\usepackage[many]{tcolorbox}
+\usepackage{lipsum}
 
 \title{Tarea 2 Matemáticas Avanzadas de la Física}
 \author{Cerritos Lira Carlos}
@@ -44,7 +47,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{cases*},\quad y_0=3, \quad y'_0=-8 $
 
 \end{enumerate}
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
     \subsubsection*{Caso General}
     En el caso general se tiene:
     \begin{align*}
@@ -71,8 +74,6 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         g*h &=Ay_0h' + (Ay_0' + By_0)h
     \end{align*}
     entonces la solución es $y = \frac{1}{A} (y_1 + y_2)$
-\end{tcolorbox}
-\begin{tcolorbox}
     \subsubsection*{1)}
     Hacemos cuentas para encontrar los parametros del caso general:
     \begin{align*}
@@ -114,8 +115,6 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         \centering
         \includegraphics[scale=0.7]{images/p1_2.png}
     \end{figure}
-\end{tcolorbox}
-\begin{tcolorbox}
     \subsubsection*{3)}
     Hacemos cuentas para encontrar los parametros del caso general:
     \begin{align*}
@@ -167,14 +166,90 @@ f_\epsilon(t)=\frac{1}{\pi}\frac{\epsilon}{t^2+\epsilon^2}, t\in\mathbb{R},
 \epsilon \ge>0.
 \]
 \begin{enumerate}[a)]
-    \item Argumentar que $\lim_{\epsilon\to0^+}f_\epsilon(t)=\delta(t)$, 
+    \item Argumentar que $\lim_{\epsilon \to 0^+}f_\epsilon(t)=\delta(t)$, 
     donde $\delta(t)$ es la delta de Dirac. 
     \item A partir de $f_\epsilon(t)$ obtener un conjunto de funciones que aproximen a la función de Heaviside $h(t)$, a $\delta'(t)$ y 
     a $\delta''(t)$ y estudiar las correspondientes gráficas. 
 \end{enumerate}
-\begin{tcolorbox}
-
+\begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+    Nuestro conjunto de funciones debe de satisfacer:
+    \begin{align*}
+        \lim_{\epsilon \to 0^+} \int_{-\infty}^\infty f_\epsilon g dt &= g(0)
+        \quad \forall g \in S(R)
+    \end{align*}
+    esto sucede si se cumplen las relaciones: 
+    \begin{align*}
+        \int_{-\infty}^\infty f_{\epsilon}dt &= 1, \quad \forall \epsilon > 0 \\
+        \lim_{\epsilon \rightarrow 0^+}f_\epsilon (t) &= 0, \quad \forall t \neq 0 \\
+        \lim_{\epsilon \rightarrow 0^+}f_\epsilon (0) &= \infty
+    \end{align*}
+    para la primera relación:
+    \begin{align*}
+        \int_{-\infty}^\infty f_{\epsilon}dt 
+        &= \frac{1}{\pi} arctan\frac{t}{\epsilon} \biggr\rvert_{-\infty}^\infty \\
+        &= \frac{1}{\pi} \pi = 1
+    \end{align*}
+    para la segunda relación:
+    \begin{align*}
+        \lim_{\epsilon \rightarrow 0^+} f_\epsilon (t) 
+        &=\frac{1}{\pi} \lim_{\epsilon \rightarrow 0^+} \frac{\epsilon}{t^2} \\ 
+        &= 0
+    \end{align*}
+    para la tercer relación:
+    \begin{align*}
+        \lim_{\epsilon \rightarrow 0^+} f_\epsilon (t) 
+        &=\lim_{\epsilon \rightarrow 0^+} \frac{1}{\pi} \frac{1}{\epsilon} \\
+        &= \infty
+    \end{align*}
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[scale=0.7]{images/p2_f.png}
+    \end{figure}
+    \subsubsection*{b)}
+    Obtenemos $h(t)$ usando la relación $h'(t) = \delta(t)$ de donde tenemos:
+    \begin{align*}
+        h_\epsilon(t)
+        &= \int_{c}^t f_\epsilon(\alpha) d\alpha + h_\epsilon(c) \\ 
+        &= \int_{-\infty}^t f_\epsilon dt \\
+        &= arctan\left( \frac{t}{\epsilon} \right) + \frac{1}{2} 
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{images/p2_h.png}
+    \end{figure}
+    Obtenemos $\delta'(t)$ 
+    \begin{align*}
+        \delta'_\epsilon(t) 
+        &= \lim_{\epsilon \to 0^+} \delta'_\epsilon(t) \\
+        &= \lim_{\epsilon \to 0^+} -\dfrac{2{\epsilon}t}{{\pi}\left(t^2+{\epsilon}^2\right)^2}
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{images/p2_f_dot.png}
+    \end{figure}
+    La gráfica es consistente con la relación:
+    \begin{align*}
+        \lim_{\epsilon \to 0^+} \int_{-\infty}^\infty \delta'_n g dt &= -g'(0)
+        \quad \forall g \in S(R)
+    \end{align*}
+    Obtenemos $\delta''(t)$:
+    \begin{align*}
+        \delta''(t) 
+        &= \lim_{\epsilon \to 0^+} \delta''_\epsilon(t) \\
+        &= \lim_{\epsilon \to 0^+} \dfrac{2{\epsilon}\left(3t^2-{\epsilon}^2\right)}{{\pi}\left(t^2+{\epsilon}^2\right)^3} 
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{images/p2_f_ddot.png}
+    \end{figure}
+    La gráfica es consistente con la relación:
+    \begin{align*}
+        \lim_{\epsilon \to 0^+} \int_{-\infty}^\infty \delta''_n g dt &= g''(0)
+        \quad \forall g \in S(R)
+    \end{align*}
 \end{tcolorbox}
+\newpage
 
 \section*{3.-} 
 En los siguientes cuatro 4 apartados, a partir de las soluciones
@@ -186,7 +261,7 @@ de la ecuación no homogénea usando funciones de Green.
     \item $y''-2cosec^2(x)y=sin^2(x)$, con $cotg(x), 1-xcotg(x)$ soluciones de la homogénea.
     \item $(x^2+1)y''-2xy'+2y=(x^2+1)^2$, con $x, 1-x^2$ soluciones de la homogénea.
 \end{enumerate}
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
     \subsubsection*{Caso General}
     En el caso general tenemos la ecuación:
     \begin{align*}
@@ -220,10 +295,8 @@ de la ecuación no homogénea usando funciones de Green.
     entonces 
     \[ y = y_1 \pm y_2 \] 
     es solución de la ecuación homogénea.
-    
-    
-\end{tcolorbox}
-\begin{tcolorbox}
+    \newpage
+
     \subsubsection*{1)}
     Hacemos cuentas para obtener los parametros del caso general:
     \begin{align*}
@@ -253,8 +326,7 @@ de la ecuación no homogénea usando funciones de Green.
         \centering
         \includegraphics[scale=0.7]{images/p3_2.png}
     \end{figure}
-\end{tcolorbox}
-\begin{tcolorbox}
+
     \subsubsection*{3)}
     Hacemos cuentas para obtener los parametros del caso general:
     \begin{align*}
@@ -284,9 +356,8 @@ de la ecuación no homogénea usando funciones de Green.
         \centering
         \includegraphics[scale=0.7]{images/p3_4.png}
     \end{figure}
-
 \end{tcolorbox}
-
+\newpage
 
 
 \section*{4.-}
@@ -297,8 +368,88 @@ condiciones iniciales usando el método de separación de variables:
     \item $-\left(\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}+\frac{\partial^2u}{\partial z^2}\right)=Eu$ en $\Omega=\{(x,y,z)\in\mathbb{R}^3: 0<x<a,0<y<b, 0<z<c\}$
     con $u(x,y,z)$ anulándose en todos los lados del paralelepípedo. 
 \end{enumerate}
-\begin{tcolorbox}
-    
+\begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+    Suponemos nuestra solución es de la forma:
+    \begin{align*}
+        U(x,y,z) &= X(x)Y(y)Z(z)
+    \end{align*}
+    se tiene entonces:
+    \begin{align*}
+        \nabla U = U \left( \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z}  \right)
+    \end{align*}
+    por las condiciones del problema se debe de satisfacer:
+    \begin{align*}
+        \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} &= 0
+    \end{align*}
+    de donde obtenemos la relacion: 
+    \begin{align*}
+        k_n^2 + k_m^2 - k_{nm}^2 &= 0
+    \end{align*}
+    las solciones a esto son:
+    \begin{align*}
+        X_n &= 
+        \begin{cases}
+            sin(k_nx) \\
+            cos(k_nx) 
+        \end{cases} \\
+        Y_m &=
+        \begin{cases}
+            sin(k_my) \\ 
+            cos(k_my)
+        \end{cases} \\
+        Z_{nm} &=
+        \begin{cases}
+            sinh(k_{nm}z) \\
+            cosh(k_{nm}z)
+        \end{cases} 
+    \end{align*}
+    de acuerdo a las condiciones del problema:
+    \begin{align*}
+        &U(x,0,z) = 0 &&U(0,y,z) = 0 \\
+        &U(x,c,z) = 0 &&U(c,y,z) = 0 \\ 
+        &U(x,y,0) = 0 &&U(x,y,L) = V
+    \end{align*}
+    por lo cual elegimos:
+    \begin{align*}
+        X_n(x) &= sin\left( \frac{2\pi n}{c} x\right) \\
+        Y_m(y) &= sin\left( \frac{2\pi m}{c} y\right) \\
+        Z_{nm}(z) &= sinh(k_{mn}z)
+        \quad k_{nm} = \frac{2\pi}{c} \sqrt{ n^2 + m^2 } 
+    \end{align*}
+    ahora bien, proponemos como solución una combinación lineal de nuestras soluciones, esto es:
+    \begin{align*}
+        U 
+        &=\sum_{n=1}^\infty \sum_{m=1}^\infty A_{mn}X_nY_mZ_{nm}
+    \end{align*}
+    definimos $C_{mn} = A_{mn}Z_{mn}(L)$ y obtenemos la relación:
+    \begin{align*}
+        U(x,y,L) 
+        &=\sum_{n=1}^\infty \sum_{m=1}^\infty C_{mn}X_n(x)Y_m(y)
+    \end{align*}
+    como $\{\frac{4}{c^2}sin(\frac{2\pi n}{c}x)sin(\frac{2\pi m}{c}y),\quad n,m \in N\}$ son base ortonormal del espacio 
+    de funciones continuas de périodo $c$ en $x$ y $y$:
+    \begin{align*}
+        C_{mn} &= \frac{4}{c^2} \int_0^c\int_0^c Vsin\left(\frac{2\pi n}{c}x\right)sin\left(\frac{2\pi m}{c}y\right)dxdy
+    \end{align*}
+    haciendo cuentas encontramos:
+    \begin{align*}
+        A_{mn} &= 
+        \begin{cases}
+        \frac{16V}{mn\pi^2}\frac{1}{sinh(k_{mn}L)} & m,n \in impares \\
+        0 &c.c    
+        \end{cases}
+    \end{align*}
+    \subsubsection*{b)}
+    Nuevamente calculando el gradiente obtenemos:
+    \begin{align*}
+        \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} &= -E
+    \end{align*}
+    de donde obtenemos las relaciones:
+    \begin{align*}
+        k_n^2 + k_m^2 - k_{nm}^2 &= -E
+    \end{align*}
+    Nuevamente podemos 
 \end{tcolorbox}
 \section*{Bibliografía}
 \begin{itemize}
