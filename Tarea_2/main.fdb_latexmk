@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1584940729 "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.tex" "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.pdf" "main" 1584940731
+["pdflatex"] 1585013826 "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.tex" "c:\Users\i5 8400\Desktop\6th semester\MAF\Tarea_2/main.pdf" "main" 1585013828
   "C:/Users/i5 8400/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1583811676 11548 260c02f36e35224d7e0ac0afbcab287c ""
   "C:/Users/i5 8400/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1583023311 10372882 1de7424362df584932303eb85ba46e56 ""
   "C:/Users/i5 8400/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1584775429 83751 6e4565e2a96ca36e797cc3ed7d4e67f8 ""
@@ -178,8 +178,8 @@
   "C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/tex/latex/trimspaces/trimspaces.sty" 1253165583 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.aux" 1584940731 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.tex" 1584940727 15968 5eb491e0b3241929156426c9646a22b3 ""
+  "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.tex" 1585013825 15961 3693be6085f5d94370331ec01a611160 ""
+  "c:\Users\i5 8400\Desktop\6th semester\MAF\Tarea_2/main.aux" 1585013828 662 b2b94621371df8d9296b8bf5bec1b851 ""
   "images/p1_1.png" 1584931720 20317 e87e157393b4ffd8a25d5052ba3e77da ""
   "images/p1_2.png" 1584931726 8589 cec174bbf236cc372e88badf3d73134c ""
   "images/p1_3.png" 1584931756 15478 465f7e41f17dbfcf6bf0b3bcd7564ef0 ""
@@ -192,13 +192,13 @@
   "images/p3_2.png" 1584772586 14661 d7e141fcd575420f7cc9f4a5392c3c5f ""
   "images/p3_3.png" 1584772587 19082 4b2a1bbb58725681016ce446d86ad7bc ""
   "images/p3_4.png" 1584772588 19975 a5286d56ae5c1becdfca9ac811285af7 ""
-  "main.aux" 1584940731 662 b2b94621371df8d9296b8bf5bec1b851 "pdflatex"
-  "main.out" 1584940731 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1584940727 15968 5eb491e0b3241929156426c9646a22b3 ""
+  "main.aux" 1585013828 662 b2b94621371df8d9296b8bf5bec1b851 "pdflatex"
+  "main.out" 1585013827 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1585013825 15961 3693be6085f5d94370331ec01a611160 ""
   (generated)
-  "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.log"
-  "main.out"
-  "main.aux"
-  "c:/Users/i5 8400/Desktop/6th semester/MAF/Tarea_2/main.pdf"
+  "c:\Users\i5 8400\Desktop\6th semester\MAF\Tarea_2/main.log"
   "main.log"
+  "c:\Users\i5 8400\Desktop\6th semester\MAF\Tarea_2/main.pdf"
   "main.pdf"
+  "main.aux"
+  "main.out"

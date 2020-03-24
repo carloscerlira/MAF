@@ -412,31 +412,31 @@ condiciones iniciales usando el método de separación de variables:
     \end{align*}
     por lo cual elegimos:
     \begin{align*}
-        X_n(x) &= sin\left( \frac{2\pi n}{c} x\right) \\
-        Y_m(y) &= sin\left( \frac{2\pi m}{c} y\right) \\
-        Z_{nm}(z) &= sinh(k_{mn}z)
-        \quad k_{nm} = \frac{2\pi}{c} \sqrt{ n^2 + m^2 } 
+        X_n(x) &= sin\left( \frac{\pi n}{c} x\right) \\
+        Y_m(y) &= sin\left( \frac{\pi m}{c} y\right) \\
+        Z_{nm}(z) &= sinh(k_{nm}z)
+        \quad k_{nm} = \frac{\pi}{c} \sqrt{ n^2 + m^2 } 
     \end{align*}
     ahora bien, proponemos como solución una combinación lineal de nuestras soluciones, esto es:
     \begin{align*}
         U 
-        &=\sum_{n=1}^\infty \sum_{m=1}^\infty A_{mn}X_nY_mZ_{nm}
+        &=\sum_{n=1}^\infty \sum_{m=1}^\infty A_{nm}X_nY_mZ_{nm}
     \end{align*}
-    definimos $C_{mn} = A_{mn}Z_{mn}(L)$ y obtenemos la relación:
+    definimos $C_{nm} = A_{nm}Z_{nm}(L)$ y obtenemos la relación:
     \begin{align*}
         U(x,y,L) 
-        &=\sum_{n=1}^\infty \sum_{m=1}^\infty C_{mn}X_n(x)Y_m(y)
+        &=\sum_{n=1}^\infty \sum_{m=1}^\infty C_{nm}X_n(x)Y_m(y)
     \end{align*}
-    como $\{\frac{4}{c^2}sin(\frac{2\pi n}{c}x)sin(\frac{2\pi m}{c}y),\quad n,m \in N\}$ son base ortonormal del espacio 
+    como $\{\frac{4}{c^2}sin(\frac{\pi n}{c}x)sin(\frac{\pi m}{c}y),\quad n,m \in N\}$ son base ortonormal del espacio 
     de funciones continuas de périodo $c$ en $x$ y $y$:
     \begin{align*}
-        C_{mn} &= \frac{4}{c^2} \int_0^c\int_0^c Vsin\left(\frac{2\pi n}{c}x\right)sin\left(\frac{2\pi m}{c}y\right)dxdy
+        C_{nm} &= \frac{4}{c^2} \int_0^c\int_0^c Vsin\left(\frac{\pi n}{c}x\right)sin\left(\frac{\pi m}{c}y\right)dxdy
     \end{align*}
     haciendo cuentas encontramos:
     \begin{align*}
-        A_{mn} &= 
+        A_{nm} &= 
         \begin{cases}
-        \frac{16V}{mn\pi^2}\frac{1}{sinh(k_{mn}L)} & m,n \in impares \\
+        \frac{16V}{nm\pi^2}\frac{1}{sinh(k_{nm}L)} & m,n \in impares \\
         0 &c.c    
         \end{cases}
     \end{align*}
