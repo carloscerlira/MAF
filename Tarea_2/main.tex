@@ -38,7 +38,7 @@ Usar la transformada de Laplace para resolver las siguientes ecuaciones diferenc
 con condiciones iniciales y estudiar la gráfica de las soluciones.
 \begin{enumerate}
     \item $y'' + 3y' + 2y = -5sin(t) + 5cos(t),\quad y_0 = 5,\quad y'_0 = 3$
-    \item $y'' + y = 5h(t-\pi),\quad y_0=2,\quad y'_0 = 4$, donde $h(t)$ es la función de Heaviside.
+    \item $y'' + y = 5u(t-\pi),\quad y_0=2,\quad y'_0 = 4$, donde $u(t)$ es la función de Heaviside.
     \item $y'' + 2y' + 2y = e^{-t} + 5\delta (t-2),\quad y_0 = 0,\quad y'_0=1$, donde $\delta(t)$ es la delta de Dirac.
     \item $ y'' + 8y' + 15y = 
     \begin{cases*}
@@ -54,24 +54,24 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         Ay'' + By' + Cy &= f(t)\\
         A(p^2Y - py_0 - y_0') + B(pY - y_0) + CY &= F \\
         Y(Ap^2 + Bp + C) - (Ay_0p + Ay_0' + By_0) &= F \\
-        Y &= \frac{1}{A(p+a)(p+b)}(F + Ay_0p + Ay_0' + By_0) \\
-        Y &= \frac{1}{A}H(F + G) = \frac{1}{A} (Y_1 + Y_2) 
+        Y &=\frac{1}{A(p+a)(p+b)}(F + Ay_0p + Ay_0' + By_0) \\
+        Y &=\frac{1}{A}H(F + G) = \frac{1}{A} (Y_1 + Y_2) 
     \end{align*} 
     Resolvamos $Y_1 = HF$ \\ 
     En este caso tenemos $y_1 = f*h$, donde 
     \begin{align*}
-        h(t) &= \frac{e^{-at} - e^{-bt}}{b-a},\quad a \neq b \\ 
-        h(t) &= te^{-at},\quad a=b
+        h(t) &=\frac{e^{-at} - e^{-bt}}{b-a},\quad a \neq b \\ 
+        h(t) &=te^{-at},\quad a=b
     \end{align*}
     Resolvamos $Y_2 = HG$. \\
-    En este caso tenemos $y_2 = g*h$, donde 
+    En este caso tenemos $y_2 = h*g$, donde 
     \begin{align*}
-        g(t) &= Ay_0\delta'(t) + (Ay_0' + By_0)\delta(t)
+        g &=Ay_0\delta' + (Ay_0' + By_0)\delta
     \end{align*}
     calculando la convolución obtenemos:
     \begin{align*}
-        g*h &=Ay_0 \delta'*h + (Ay_0' + By_0) \delta*h \\
-        g*h &=Ay_0h' + (Ay_0' + By_0)h
+        h*g &=Ay_0 \delta'*h + (Ay_0' + By_0) \delta*h \\
+        h*g &=Ay_0h' + (Ay_0' + By_0)h
     \end{align*}
     entonces la solución es $y = \frac{1}{A} (y_1 + y_2)$
     \subsubsection*{1)}
@@ -83,13 +83,18 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}
     se tiene entonces:
     \begin{align*}
-        A, B, C &= 1, 2, 3 \\ 
-        a, b &= 1, 2 \\
-        y_0, y_0' &= 5, 3
+        &f(t) = -5sint + 5cost
+        &&A, B, C = 1, 2, 3 \\ 
+        &y_0, y_0' = 5, 3 
+        &&a, b = 1, 2 
     \end{align*}
     entonces nuestra solución es:
-    \[ y = f*h + g*h \]
-    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
+    \begin{align*}
+        y 
+        &= h*f + h*g \\
+        &= \int_{0}^t h(t-\tau)f(\tau)d\tau  + Ay_0h' + (Ay_0'+By_0)h 
+    \end{align*}
+    resolviendo numéricamente $h*f$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_1.png}
@@ -104,13 +109,18 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}
     se tiene entonces:
     \begin{align*}
-        A, B, C &= 1,1,0 \\ 
-        a,b &= 1,0 \\
-        y_0, y_0' &= 2, 4
+        &f(t) = 5u(t-\pi) 
+        &&A, B, C = 1,1,0 \\
+        &y_0, y_0' = 2, 4 
+        &&a,b = 1,0 
     \end{align*}
     entonces nuestra solución es:
-    \[ y = f*h + g*h \]
-    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
+    \begin{align*}
+        y 
+        &= h*f + h*g \\
+        &= \int_{0}^t h(t-\tau)f(\tau)d\tau  + Ay_0h' + (Ay_0'+By_0)h 
+    \end{align*}
+    resolviendo numéricamente $h*f$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_2.png}
@@ -124,13 +134,18 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}
     se tiene entonces:
     \begin{align*}
-        A, B, C &= 1, 2, 2 \\ 
-        a,b &= 1+i, 1-i \\  
-        y_0, y_0' &= 0,1
+        &f(t) = e^{-t} + 5\delta(t-2)
+        &&A, B, C = 1, 2, 2 \\ 
+        &y_0, y_0' = 0,1
+        &&a,b = 1+i, 1-i   
     \end{align*}    
     entonces nuestra solución es:
-    \[ y = f*h + g*h \]
-    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
+    \begin{align*}
+        y
+        &= h*f + h*g \\
+        &= \int_{0}^t h(t-\tau)e^{-\tau}d\tau + 5h(t-2)u(t-2)  + Ay_0h' + (Ay_0'+By_0)h 
+    \end{align*}
+    resolviendo numéricamente $h*e^{-t}$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_3.png}
@@ -145,19 +160,28 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
     \end{align*}
     se tiene entonces:
     \begin{align*}
-        A, B, C &= 1,8,15 \\
-        a,b &= 5,3 \\ 
-        y_0, y_0' &= 3,-8
+        &f(t) = 
+        \begin{cases*}
+            35e^{2t}, & si $0<t<2$ \\
+            0,& caso contrario
+        \end{cases*}
+        &&A, B, C = 1,8,15 \\
+        &y_0, y_0' = 3,-8
+        &&a,b = 5,3 
     \end{align*}
     entonces nuestra solución es:
-    \[ y = f*h + g*h \]
-    resolviendo numéricamente $f*h$ encontramos la gráfica de $y$:
+    \begin{align*}
+        y(t) 
+        &= h*f + h*g \\
+        &= \int_{0}^t h(t-\tau)f(\tau)d\tau + Ay_0h' + (Ay_0'+By_0)h 
+    \end{align*}
+    resolviendo numéricamente $h*f$ encontramos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p1_4.png}
     \end{figure}
-
 \end{tcolorbox}
+\newpage
 
 \section*{2.-}
 Se define el siguiente conjunto de funciones (llamado lorentziano):
@@ -306,7 +330,11 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &= sinh  &&y_2= cosh(x-b)-1 \\
         y_1' &= cosh &&y_2'=sinh 
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral numéricamente:
+    entonces nuestra solución es:
+    \begin{align*}
+        y &=  y_2\int_{a}^x Bf dx' + y_1\int_{x}^b Afdx' 
+    \end{align*}
+    resolviendo la integral númericamente obtenemos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_1.png}
@@ -321,7 +349,11 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &= x^2  &&y_2= x^2-x \\
         y_1' &= 2x &&y_2'= 2x-1 
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral numéricamente:
+    entonces nuestra solución es:
+    \begin{align*}
+        y &=  y_2\int_{a}^x Bf dx' + y_1\int_{x}^b Afdx' 
+    \end{align*}
+    resolviendo la integral númericamente obtenemos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_2.png}
@@ -336,7 +368,11 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &= 1-xcotx  &&y_2= cotx \\
         y_1' &= -cotx + xcsc^2x  &&y_2'= -csc^2x 
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral numéricamente:
+    entonces nuestra solución es:
+    \begin{align*}
+        y &=  y_2\int_{a}^x Bf dx' + y_1\int_{x}^b Afdx' 
+    \end{align*}
+    resolviendo la integral númericamente obtenemos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_3.png}
@@ -351,7 +387,11 @@ de la ecuación no homogénea usando funciones de Green.
         y_1 &=x  &&y_2= 1-x^2 \\
         y_1' &=1 &&y_2'= -2x  
     \end{align*}
-    de donde obtenemos $y$ resolviendo la integral numéricamente:
+    entonces nuestra solución es:
+    \begin{align*}
+        y &=  y_2\int_{a}^x Bf dx' + y_1\int_{x}^b Afdx' 
+    \end{align*}
+    resolviendo la integral númericamente obtenemos la gráfica de $y$:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.7]{images/p3_4.png}
