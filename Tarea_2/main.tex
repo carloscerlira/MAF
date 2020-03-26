@@ -27,7 +27,7 @@
 
 \title{Tarea 2 Matemáticas Avanzadas de la Física}
 \author{Cerritos Lira Carlos}
-\date{2 de Marzo del 2020}
+\date{25 de Marzo del 2020}
 
 \begin{document}
 \maketitle
@@ -36,7 +36,7 @@ Nota: código utilizado se encuentra en
 \section*{1.-}
 Usar la transformada de Laplace para resolver las siguientes ecuaciones diferenciales
 con condiciones iniciales y estudiar la gráfica de las soluciones.
-\begin{enumerate}
+\begin{enumerate}[a)]
     \item $y'' + 3y' + 2y = -5sin(t) + 5cos(t),\quad y_0 = 5,\quad y'_0 = 3$
     \item $y'' + y = 5u(t-\pi),\quad y_0=2,\quad y'_0 = 4$, donde $u(t)$ es la función de Heaviside.
     \item $y'' + 2y' + 2y = e^{-t} + 5\delta (t-2),\quad y_0 = 0,\quad y'_0=1$, donde $\delta(t)$ es la delta de Dirac.
@@ -74,7 +74,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         h*g &=Ay_0h' + (Ay_0' + By_0)h
     \end{align*}
     entonces la solución es $y = \frac{1}{A} (y_1 + y_2)$
-    \subsubsection*{1)}
+    \subsubsection*{a)}
     Hacemos cuentas para encontrar los parametros del caso general:
     \begin{align*}
         Ap^2 + Bp + C 
@@ -100,7 +100,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         \includegraphics[scale=0.7]{images/p1_1.png}
     \end{figure}
 
-    \subsubsection*{2)}
+    \subsubsection*{b)}
     Hacemos cuentas para encontrar los parametros del caso general:
     \begin{align*}
         Ay^2 + By + C 
@@ -125,7 +125,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         \centering
         \includegraphics[scale=0.7]{images/p1_2.png}
     \end{figure}
-    \subsubsection*{3)}
+    \subsubsection*{c)}
     Hacemos cuentas para encontrar los parametros del caso general:
     \begin{align*}
         Ay^2 + By + C 
@@ -151,7 +151,7 @@ con condiciones iniciales y estudiar la gráfica de las soluciones.
         \includegraphics[scale=0.7]{images/p1_3.png}
     \end{figure}
 
-    \subsubsection*{4)}
+    \subsubsection*{d)}
     Hacemos cuentas para encontrar los parametros del caso general:
     \begin{align*}
         Ay^2 + By + C 
@@ -321,14 +321,14 @@ de la ecuación no homogénea usando funciones de Green.
     es solución de la ecuación homogénea.
     \newpage
 
-    \subsubsection*{1)}
+    \subsubsection*{a)}
     Hacemos cuentas para obtener los parametros del caso general:
     \begin{align*}
         f&= sech \\
         a&=0 &&b=15 \\
         p&=0 &&q=-1 \\
         y_1 &= sinh  &&y_2= cosh(x-b)-1 \\
-        y_1' &= cosh &&y_2'=sinh 
+        y_1' &= cosh &&y_2'=sinh(x-b)
     \end{align*}
     entonces nuestra solución es:
     \begin{align*}
@@ -340,7 +340,7 @@ de la ecuación no homogénea usando funciones de Green.
         \includegraphics[scale=0.7]{images/p3_1.png}
     \end{figure}
 
-    \subsubsection*{2)}
+    \subsubsection*{b)}
     Hacemos cuentas para obtener los parametros del caso general:
     \begin{align*}
         f&= \frac{logx}{x} \\
@@ -359,7 +359,7 @@ de la ecuación no homogénea usando funciones de Green.
         \includegraphics[scale=0.7]{images/p3_2.png}
     \end{figure}
 
-    \subsubsection*{3)}
+    \subsubsection*{c)}
     Hacemos cuentas para obtener los parametros del caso general:
     \begin{align*}
         f&= sin^2x \\
@@ -378,10 +378,10 @@ de la ecuación no homogénea usando funciones de Green.
         \includegraphics[scale=0.7]{images/p3_3.png}
     \end{figure}
 
-    \subsubsection*{4)}
+    \subsubsection*{d)}
     Hacemos cuentas para obtener los parametros del caso general:
     \begin{align*}
-        f&= 1 \\
+        f&= x^2+1 \\
         a &=0 &&b=1 \\
         p &=\frac{-2x}{x^2+1} &&q= \frac{2}{x^2+1} \\
         y_1 &=x  &&y_2= 1-x^2 \\
@@ -422,9 +422,9 @@ condiciones iniciales usando el método de separación de variables:
     \begin{align*}
         \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} &= 0
     \end{align*}
-    de donde obtenemos la relacion: 
+    proponemos las relaciones: 
     \begin{align*}
-        k_n^2 + k_m^2 - k_{nm}^2 &= 0
+        -k_n^2 - k_m^2 + k_{nm}^2 &= 0
     \end{align*}
     las solciones a esto son:
     \begin{align*}
@@ -455,7 +455,7 @@ condiciones iniciales usando el método de separación de variables:
         X_n(x) &= sin\left( \frac{\pi n}{c} x\right) \\
         Y_m(y) &= sin\left( \frac{\pi m}{c} y\right) \\
         Z_{nm}(z) &= sinh(k_{nm}z)
-        \quad k_{nm} = \frac{\pi}{c} \sqrt{ n^2 + m^2 } 
+        \quad k_{nm} = \frac{\pi \sqrt{ n^2 + m^2 }}{c} 
     \end{align*}
     ahora bien, proponemos como solución una combinación lineal de nuestras soluciones, esto es:
     \begin{align*}
@@ -485,11 +485,28 @@ condiciones iniciales usando el método de separación de variables:
     \begin{align*}
         \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} &= -E
     \end{align*}
-    de donde obtenemos las relaciones:
+    proponemos las relaciones:
     \begin{align*}
-        k_n^2 + k_m^2 - k_{nm}^2 &= -E
+        -k_n^2 -k_m^2 -k_{l}^2 &= -E
+    \end{align*} 
+    dada las condiciones del problema elegimos:
+    \begin{align*}
+        X_n(x) &= sin\left( \frac{\pi n}{a} x\right) \\
+        Y_m(y) &= sin\left( \frac{\pi m}{b} y\right) \\
+        Z_{l}(z) &= sin\left( \frac{\pi l}{c} z\right)
     \end{align*}
-    Nuevamente podemos 
+    entonces tenemos un conjunto de soluciones:
+    \begin{align*}
+        U_{nml} &= X_nY_mZ_l 
+    \end{align*}
+    que satisfacen:
+    \begin{align*}
+        -\nabla^2 U_{nml} &= E_{nml} \\ 
+        E_{nml} &= k_n^2+k_m^2+k_l^2 
+    \end{align*}
+    tambien cualqueir multiplicación por un escalar de estas solcuiones sigue siendo 
+    solución al problema, en el caso de que $E$ no se pueda ver de esta forma se tiene
+    la solución trivial $U=0$.
 \end{tcolorbox}
 \section*{Bibliografía}
 \begin{itemize}
