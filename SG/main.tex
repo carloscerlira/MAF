@@ -175,8 +175,55 @@ se tienen las condicones:
     \item $s_1=s_2 \implies y_2(x) = x^{s_1+1}\sum_{n=0}^\infty b_nx^n + y_1(x)log(x) $
 \end{enumerate}    
 
-\subsection*{Funciondes de Legendre}
-\subsection*{Funciones de Sessel}
+\subsection*{Ecuación de Legendre}
+\subsubsection*{Ecuación de Laplace en coordenadas esféricas}
+\[ (1-x^2)y'' -2xy' + l(l+1)y = 0 \]
+\subsubsection*{Formula de Rodrigues}
+\[y(x) = P_l(x)\]
+\[P_l(x) = \frac{1}{2^ll!}\frac{d^l}{dx^l}[(x^2-1)^l] \]
+\subsubsection*{Función generadora}
+Se tiene la relación:
+\[ \Phi(x,h) = \sum_{n=0}^\infty \phi_n(x)h^n \]
+para los polinomios de Legendre tenemos:
+\[ \Phi(x,h) = (1-2xh+h^2)^{\frac{1}{2}} = \sum_{l=0}^\infty P_l(x)h^l \quad |h|<1 \]
+\subsubsection*{Relaciones de recurrencia}
+\begin{enumerate}[a)]
+    \item $(l+1)P_{l+1}(x)-(2l+1)xP_l(x)+lP_{l-1} = 0$
+    \item $xP_l'(x) - P_{l-1}'(x) = lP_l(x)$
+    \item $P_l'(x) - xP_{l-1}'(x) = lP_{l-1}(x)$  
+\end{enumerate}
+\begin{tcolorbox}
+    Expansión del potencial gravitacional o eléctrico
+    \[ I = (1-2xh+h^2)^{-\frac{1}{2}} \]
+    Tenemos un potencial de la forma:
+    \begin{align*}
+        V 
+        &= \frac{k}{d} \\
+        &= \frac{k}{R}\Phi\left(cos\theta, \frac{r}{R}\right)
+    \end{align*}
+    podemos obtener una aproximación para $V$ utilizando un número finito en la suma.
+\end{tcolorbox}
+\subsubsection*{Ortogonalidad}
+\[ \int_{-1}^1 P_n(x)P_m(x) dx= 0 \quad n\neq m \]
+\[ \int_{-1}^1 P_{l}^2(x) dx = \frac{2}{2l+1} \]
+se tiene entonces $\forall f:[-1,1] \to R$ si f es Dirishlet:
+\begin{align*}
+    f(x) &= \sum_{l=0}^\infty c_lP_l(x)P_m(x) \\
+    c_m &= \frac{2m+1}{2}\int_{-1}^1 f(x)P_m(x)dx
+\end{align*}
+\subsubsection*{Ec. de Legendre generalziada}
+\[(1-x^2)y'' - 2xy' + \left[l(l-1)-\frac{m^2}{1-x^2}\right]y = 0, m^2<l^2 \]
+tiene por solución:
+\[ y= P_l^m(x) = (1-x^2)^{\frac{m}{2}} \frac{d^m}{dx^m}P_l(x) \]
+\subsection*{Ecuación de Bessel}
+\[ x^2y''+xy'+(x^2-p^2)y = 0,\quad p \in R \]
+tiene por solción:
+\[ J_p(x) = \sum_{n=0}^\infty \frac{(-1)^n}{\Gamma(n+1)\Gamma(n+p+1)}\left( \frac{x}{2} \right)^{2n+p} \quad p>0\]
+\subsubsection*{Relaciones de recurrencia}
+\begin{enumerate}
+    \item $\frac{d}{dx}[x^pJ_p(x)] = x^pJ_{p-1}(x)$
+\end{enumerate}
+
 \subsection*{Funciones de Hermite, Lagre y Jacobi}
 
 \end{document}

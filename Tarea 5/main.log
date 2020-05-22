@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.29)  30 APR 2020 21:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.29)  21 MAY 2020 19:36
 entering extended mode
-**"c:/Users/i5 8400/Desktop/6th semester/MAF/SG/main.tex"
-("c:/Users/i5 8400/Desktop/6th semester/MAF/SG/main.tex"
+**"c:/Users/i5 8400/Desktop/Sexto Semestre/Matematicas Avanzadas de la Física/Tarea 5/main.tex"
+("c:/Users/i5 8400/Desktop/Sexto Semestre/Matematicas Avanzadas de la Física/Tarea 5/main.tex"
 LaTeX2e <2020-02-02> patch level 4
 L3 programming layer <2020-02-25> ("C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -515,7 +515,7 @@ Library (tcolorbox): 'tcbxparse.code.tex' version '4.22'
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
  ("C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.ltd.tex"
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
-)) ("c:/Users\i5 8400\Desktop\6th semester\MAF\SG\main.aux")
+)) ("c:/Users\i5 8400\Desktop\Sexto Semestre\Matematicas Avanzadas de la Física\Tarea 5\main.aux")
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -548,7 +548,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
 LaTeX Info: Redefining \nameref on input line 32.
- ("c:/Users\i5 8400\Desktop\6th semester\MAF\SG\main.out") ("c:/Users\i5 8400\Desktop\6th semester\MAF\SG\main.out")
+ ("c:/Users\i5 8400\Desktop\Sexto Semestre\Matematicas Avanzadas de la Física\Tarea 5\main.out") ("c:/Users\i5 8400\Desktop\Sexto Semestre\Matematicas Avanzadas de la Física\Tarea 5\main.out")
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -578,28 +578,28 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/i5 8400/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
- ("c:/Users\i5 8400\Desktop\6th semester\MAF\SG\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
+{C:/Users/i5 8400/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+ ("c:/Users\i5 8400\Desktop\Sexto Semestre\Matematicas Avanzadas de la Física\Tarea 5\main.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 22071 strings out of 481280
- 457679 string characters out of 2905613
- 901624 words of memory out of 3000000
- 37132 multiletter control sequences out of 15000+200000
- 540201 words of font info for 55 fonts, out of 3000000 for 9000
+ 22083 strings out of 481280
+ 458319 string characters out of 2905613
+ 900624 words of memory out of 3000000
+ 37134 multiletter control sequences out of 15000+200000
+ 539942 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,13n,95p,989b,532s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "c:/Users\i5 8400\Desktop\6th semester\MAF\SG\main.pdf" (5 pages, 173759 bytes).
+ 59i,6n,95p,1028b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "c:/Users\i5 8400\Desktop\Sexto Semestre\Matematicas Avanzadas de la Física\Tarea 5\main.pdf" (3 pages, 137695 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
