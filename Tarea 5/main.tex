@@ -165,9 +165,9 @@ Si son iguales, ganamos $\$1.10$, pero si no son iguales perdemos $\$1.00$.
     \[ p(-1.0) = P(bn \cup nb) = \frac{5}{9} \]
     obtenemos la ganacia media:
     \begin{align*}
-        \mu = \sum_{i=1}^2 x_ip(x_i)
+        E(X) = \sum_{i=1}^2 x_ip(x_i)
     \end{align*}
-    \[ \mu = P(1.10)1.10 + P(-1.0)(-1.0) = -\frac{1}{15} \]
+    \[ E(X) = P(1.10)1.10 + P(-1.0)(-1.0) = -\frac{1}{15} \]
     \subsubsection*{b)}
     La varianza:
     \begin{align*}
@@ -178,7 +178,12 @@ Si son iguales, ganamos $\$1.10$, pero si no son iguales perdemos $\$1.00$.
     \end{align*}
 
     \subsubsection*{c)}
-    De de ocurrir $E(c)>0$
+    Para ganar solo se debe cumplir $E(X)>0$, de donde obtenemos:
+    \begin{align*}
+        X &= c-d \\
+        E(X) &= E(c-d)>0 \\
+        E(c) &> E(d)
+    \end{align*}
 
 \end{tcolorbox}
 
@@ -187,7 +192,7 @@ El número de minutos $X$ que juega un jugador de básquetbol en un partido alea
 con una función de densidad dada por:
 \[ f(x) =
 \begin{cases}
-    0.0025, & si \quad 10 \leq x < 20, \quad o \quad 30 \leq x < 40 \\
+    0.025, & si \quad 10 \leq x < 20, \quad o \quad 30 \leq x < 40 \\
     0.050, & si \quad 20 \leq x < 30
 \end{cases}
 \]
@@ -200,11 +205,12 @@ con una función de densidad dada por:
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-    Claramente $f(x)\geq 0$, haciendo la integral además obtenemos:
+    Claramente $f_X(x)\geq 0$, haciendo la integral además obtenemos:
     \begin{align*}
-        \int_{-\infty}^\infty f(x)dx 
-        &= \int_{10}^20 0.0025dx + \int_{20}^{30} 0.050dx + \int_{30}^40 0.0025dx \\
-        &= 10 \cdot 0.0025 + 10 \cdot 0.050 + 10 \cdot 0.0025 \\
+        \int_\Omega f_X(x)dx 
+        &= \int_{10}^{40} f_X(x)dx \\
+        &= \int_{10}^{20} 0.025dx + \int_{20}^{30} 0.050dx + \int_{30}^{40} 0.025dx \\
+        &= 10 \cdot 0.025 + 10 \cdot 0.050 + 10 \cdot 0.025 \\
         &= 1
     \end{align*}
     por lo tanto $f$ es una función de distribución.
@@ -216,20 +222,36 @@ con una función de densidad dada por:
     \subsubsection*{b)}
     \begin{align*}
         P (x\geq 15) 
-        &= \int_{15}^\infty f(x) dx \\
-        &= \int_{15}^{20} 0.0025dx + \int_{20}^{30} 0.050dx + \int_{30}^{40} 0.0025dx \\
-        &= 5 \cdot 0.0025 + 10 \cdot 0.050 + 10 \cdot 0.0025 \\
-        &= 0.53
+        &= \int_{15}^\infty f_X(x) dx \\
+        &= \int_{15}^{20} 0.025dx + \int_{20}^{30} 0.050dx + \int_{30}^{40} 0.025dx \\
+        &= 5 \cdot 0.025 + 10 \cdot 0.050 + 10 \cdot 0.025 \\
+        &= 0.875
     \end{align*}
     así mismo se tiene:
     \begin{align*}
-        P(20 \leq x \leq 30) = \int_{20}^{30} f(x)dx \\
-        P(x \leq 30) = \int_{0}^{30} f(x)dx \\
-        P(36 \geq x ) = \int_{36}^\infty f(x)dx \\ 
+        P(20 \leq x \leq 30) = \int_{20}^{30} f_X(x)dx = 0.625 \\
+        P(x < 30) = \int_{10}^{30} f_X(x)dx = 0.75 \\
+        P(36 > x ) = \int_{36}^\infty f_X(x)dx = 0.1
     \end{align*}
 
     \subsubsection*{c)}
-
+    Por definición:
+    \begin{align*}
+        E(X) 
+        &= \int_{10}^{40} xf_X(x)dx \\
+        &= \int_{10}^{20} x0.025dx + \int_{20}^{30} x0.050dx + \int_{30}^{40} x0.025dx \\
+        &= 0.025(\tfrac{20^2}{2}-\tfrac{10^2}{2})+ 0.050(\tfrac{30^2}{2}-\tfrac{20^2}{2}) + 0.025(\tfrac{40^2}{2}-\tfrac{30^2}{2}) \\
+        &= 25
+    \end{align*}
+    \begin{align*}
+        var(X)
+        &= E(X^2)-E(X)^2 \\
+        &= \int_{10}^{40}x^2f_X(x)dx - (25)^2 \\
+        &= \int_{10}^{20} x^2 0.025dx + \int_{20}^{30} x^2 0.050dx + \int_{30}^{40} x^2 0.025dx - (25)^2 \\
+        &= 0.025(\tfrac{20^3}{3}-\tfrac{10^3}{3})+ 0.050(\tfrac{30^3}{3}-\tfrac{20^3}{3}) + 0.025(\tfrac{40^3}{3}-\tfrac{30^3}{3}) - (25)^2 \\
+        &= 683.33 - (25)^2\\
+        &= 58.33
+    \end{align*}
 \end{tcolorbox}
 
 \section*{5.-}
@@ -240,7 +262,7 @@ con una función de densidad dada por:
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-    Claramente se satisface:
+    Comenzamos con la relacion:
     \begin{align*}
         F_Y(y) 
         &= P(Y \leq y) \\
@@ -287,17 +309,18 @@ normal estándar.
     \begin{align*}
         P(Z \geq 900) 
         &= 1-F(900) \\
-        &= 1-\int_0^{900} \Phi(z)dz
+        &= 1-\Phi(\tfrac{900-840}{150}) \\
+        &= 1-\Phi(\tfrac{2}{5})
     \end{align*} 
     \subsubsection*{b)}
     Llamemos $E$ al evento donde en exactamente 3 años se supera los $900$. \\
     Después de siete años se registra un outcomes de la forma:
     \[ Y|N,Y|N,...,Y|N \]
     donde por ejemplo el outcome $YYYNNNN$ nos dicé que los primeros 3 años se supero 
-    los $900ml$ y los siguientes 4 años no, si llamamos a $q$ la probabildiad de que en un año llueva más de $900ml$
+    los $900ml$ y los siguientes 4 años no, si llamamos a $p$ la probabildiad de que en un año llueva más de $900ml$
     se tiene:
     \begin{align*}
-        P(E) &= C(7,3)p^3(1-p)^{7-3}
+        P(E) &= C(7,3)p^3(1-p)^{7-3}, \quad p = 1-\Phi(\tfrac{2}{5})
     \end{align*}
 \end{tcolorbox}
 
@@ -324,7 +347,7 @@ real en la cual se usen dichas variables aleatorias.
     \subsubsection*{Valor esperado}
     \begin{align*}
         E(X) 
-        &= \sum_{x_n \in \Omega} x_np(x_n) \\
+        &= \sum_{x \in \Omega} xp(x) \\
         &= \sum_{n=1}^\infty n(1-p)^{n-1}p \\
         &= p\sum_{n=1}^\infty n(1-p)^{n-1} \\ 
         &= p(1+2(1-p)+3(1-p)^2+4(1-p)^3+...) \\
@@ -347,14 +370,13 @@ real en la cual se usen dichas variables aleatorias.
     Supongamos que en una población el $20\%$ de las personas conocen primeros auxilios,
     queremos saber en promedio a cuántas personas se les debe preguntar 
     antes de encontrar una que sepa primeros auxilios. \\
-    Llamemos $q$ a la probabilidad de que una persona aleatoria conozca primeros auxilios y $X$
-    a la variable aleatoria igual al número de personas que debemos preguntar \textbf{antes} de encontrar una 
-    que sepa primeros auxilios, entonces:
-    \[ P(X=n) = (1-.2)^{n-1}.2, \quad p \in N \]
+    Llamemos $X$ a la variable aleatoria igual al número de personas que debemos preguntar
+    \textbf{antes} de encontrar una que sepa primeros auxilios, entonces:
+    \[ P(X=n) = (1-.2)^{n-1}.2 \]
     por ejemplo un outcome para este experimento es $NNY$, esto indica que preguntamos a tres personas, 
     las primeras dos no saben y la tercera sí. \\
     De acuerdo al valor promedio calculado se tiene:
-    \[\mu = 5\]
+    \[E(X) = \frac{1}{.2} = 5\]
     Esto es, en promedio se debe preguntar a $5$ personas antes de encontrar una que sepa primeros auxilios.
     \begin{figure}[H]
         \centering
@@ -365,7 +387,7 @@ real en la cual se usen dichas variables aleatorias.
     \subsubsection*{Valor esperado}
     \begin{align*}
         E(X) 
-        &= \sum_{x_n \in \Omega} x_np(x_n) \\
+        &= \sum_{x \in \Omega} xp(x) \\
         &= \sum_{n=r}^\infty n\left( \begin{matrix} n-1 \\ r-1 \end{matrix} \right)p^r(1-p)^{n-r} \\
         &= \sum_{n=r}^\infty r\left( \begin{matrix} n \\ r \end{matrix} \right)p^r(1-p)^{n-r} \\  
         &= \frac{r}{p}\sum_{n=r+1}^\infty \left( \begin{matrix} n-1 \\ (r+1)-1 \end{matrix} \right)p^{r+1}(1-p)^{n-(r+1)} \\
